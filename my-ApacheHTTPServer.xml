@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>ApacheHTTPServer</Name>
+  <Repository>httpd</Repository>
+  <Registry>https://hub.docker.com/_/httpd</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>true</Privileged>
+  <Support/>
+  <Project/>
+  <Overview>The Apache HTTP Server Project&#xD;
+</Overview>
+  <Category/>
+  <WebUI>http://10.0.0.16:8081/</WebUI>
+  <TemplateURL/>
+  <Icon>https://d1q6f0aelx0por.cloudfront.net/product-logos/library-httpd-logo.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset>0</CPUset>
+  <DateInstalled>1607708341</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>The Apache HTTP Server Project&#xD;
+</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8081</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/apache2/</HostDir>
+      <ContainerDir>/usr/local/apache2/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/WEB</HostDir>
+      <ContainerDir>/usr/local/WEB</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Port2" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false">8081</Config>
+  <Config Name="Location" Target="/usr/local/apache2/" Default="" Mode="rw" Description="Container Path: /usr/local/apache2/" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/apache2/</Config>
+  <Config Name="WEB" Target="/usr/local/WEB" Default="" Mode="rw" Description="Container Path: /usr/local/WEB" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/WEB</Config>
+</Container>
