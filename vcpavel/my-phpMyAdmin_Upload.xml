@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>phpMyAdmin_Upload</Name>
+  <Repository>phpmyadmin</Repository>
+  <Registry>https://hub.docker.com/_/phpmyadmin</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>true</Privileged>
+  <Support/>
+  <Project/>
+  <Overview>phpMyAdmin - A web interface for MySQL and MariaDB.</Overview>
+  <Category/>
+  <WebUI>http://10.0.0.16:8083/</WebUI>
+  <TemplateURL/>
+  <Icon>https://d1q6f0aelx0por.cloudfront.net/product-logos/library-phpmyadmin-logo.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset>0</CPUset>
+  <DateInstalled>1605439092</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>phpMyAdmin - A web interface for MySQL and MariaDB.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8087</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/Spaceship/Docker/phpMyAdmin_/</HostDir>
+      <ContainerDir/>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>Pavel31213</Value>
+      <Name>MYSQL_ROOT_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>root</Value>
+      <Name>PMA_USER</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>Pavel31213</Value>
+      <Name>PMA_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>10.0.0.16</Value>
+      <Name>PMA_HOST</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>3306</Value>
+      <Name>PMA_PORT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>1</Value>
+      <Name>PMA_ARBITRARY</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>300M</Value>
+      <Name>UPLOAD_LIMIT</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Root_Password" Target="MYSQL_ROOT_PASSWORD" Default="" Mode="" Description="Container Variable: MYSQL_ROOT_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false">Pavel31213</Config>
+  <Config Name="User" Target="PMA_USER" Default="" Mode="" Description="Container Variable: MYSQL_USER" Type="Variable" Display="always" Required="false" Mask="false">root</Config>
+  <Config Name="Password" Target="PMA_PASSWORD" Default="" Mode="" Description="Container Variable: MYSQL_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false">Pavel31213</Config>
+  <Config Name="Mariadb_Location" Target="PMA_HOST" Default="" Mode="" Description="Container Variable: PMA_HOST" Type="Variable" Display="always" Required="false" Mask="false">10.0.0.16</Config>
+  <Config Name="Port" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false">8087</Config>
+  <Config Name="Mariadb_Port" Target="PMA_PORT" Default="" Mode="" Description="Container Variable: PMA_PORT" Type="Variable" Display="always" Required="false" Mask="false">3306</Config>
+  <Config Name="Server_Enable" Target="PMA_ARBITRARY" Default="" Mode="" Description="Container Variable: PMA_ARBITRARY" Type="Variable" Display="always" Required="false" Mask="false">1</Config>
+  <Config Name="Spaceship" Target="" Default="" Mode="rw" Description="Container Path: " Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Spaceship/Docker/phpMyAdmin_/</Config>
+  <Config Name="Host Key 7" Target="UPLOAD_LIMIT" Default="" Mode="" Description="Container Variable: UPLOAD_LIMIT" Type="Variable" Display="always" Required="false" Mask="false">300M</Config>
+</Container>

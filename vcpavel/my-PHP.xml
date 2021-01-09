@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>PHP</Name>
+  <Repository>php:7.4-apache</Repository>
+  <Registry>https://hub.docker.com/_/php</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>true</Privileged>
+  <Support/>
+  <Project/>
+  <Overview>While designed for web development, the PHP scripting language also provides general-purpose use.</Overview>
+  <Category/>
+  <WebUI>http://10.0.0.16:8084/</WebUI>
+  <TemplateURL/>
+  <Icon>https://d1q6f0aelx0por.cloudfront.net/product-logos/library-php-logo.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset>0</CPUset>
+  <DateInstalled>1609009899</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>While designed for web development, the PHP scripting language also provides general-purpose use.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8084</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/PHP/apache2.conf</HostDir>
+      <ContainerDir>/etc/apache2/apache2.conf</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/WEB</HostDir>
+      <ContainerDir>/var/www/html</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Host Port 1" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false">8084</Config>
+  <Config Name="Host Path 1" Target="/etc/apache2/apache2.conf" Default="" Mode="rw" Description="Container Path: /etc/apache2/apache2.conf" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/PHP/apache2.conf</Config>
+  <Config Name="Host Path 2" Target="/var/www/html" Default="" Mode="rw" Description="Container Path: /var/www/html" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/WEB</Config>
+</Container>

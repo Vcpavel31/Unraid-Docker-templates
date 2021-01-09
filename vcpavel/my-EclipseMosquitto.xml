@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>EclipseMosquitto</Name>
+  <Repository>eclipse-mosquitto</Repository>
+  <Registry>https://hub.docker.com/_/eclipse-mosquitto</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>true</Privileged>
+  <Support/>
+  <Project/>
+  <Overview>Eclipse Mosquitto is an open source message broker which implements MQTT version 5, 3.1.1 and 3.1</Overview>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://d1q6f0aelx0por.cloudfront.net/product-logos/library-eclipse-mosquitto-logo.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset>0,1</CPUset>
+  <DateInstalled>1609009809</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Eclipse Mosquitto is an open source message broker which implements MQTT version 5, 3.1.1 and 3.1</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>1883</HostPort>
+        <ContainerPort>1883</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>9001</HostPort>
+        <ContainerPort>9001</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/MQTT/log</HostDir>
+      <ContainerDir>/mosquitto/log</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/MQTT/data</HostDir>
+      <ContainerDir>/mosquitto/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/MQTT/config</HostDir>
+      <ContainerDir>/mosquitto/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Host Port 1" Target="1883" Default="" Mode="tcp" Description="Container Port: 1883" Type="Port" Display="always" Required="false" Mask="false">1883</Config>
+  <Config Name="Host Port 2" Target="9001" Default="" Mode="tcp" Description="Container Port: 9001" Type="Port" Display="always" Required="false" Mask="false">9001</Config>
+  <Config Name="Host Path 1" Target="/mosquitto/log" Default="" Mode="rw" Description="Container Path: /mosquitto/log" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/MQTT/log</Config>
+  <Config Name="Host Path 2" Target="/mosquitto/data" Default="" Mode="rw" Description="Container Path: /mosquitto/data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/MQTT/data</Config>
+  <Config Name="Host Path 3" Target="/mosquitto/config" Default="" Mode="rw" Description="Container Path: /mosquitto/config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/MQTT/config</Config>
+</Container>

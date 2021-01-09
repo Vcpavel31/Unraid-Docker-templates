@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Draw.io</Name>
+  <Repository>jgraph/drawio</Repository>
+  <Registry>https://hub.docker.com/r/jgraph/drawio</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
+  <Project>https://github.com/jgraph/drawio</Project>
+  <Overview>A lightweight diagram drawing application</Overview>
+  <Category>Productivity:</Category>
+  <WebUI>http://10.0.0.16:3000</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/draw-io.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/draw-io.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset>0</CPUset>
+  <DateInstalled>1609009498</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>A lightweight diagram drawing application</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>3000</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>3443</HostPort>
+        <ContainerPort>8443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data/>
+  <Environment>
+    <Variable>
+      <Value>false</Value>
+      <Name>LETS_ENCRYPT_ENABLED</Name>
+      <Mode>{3}</Mode>
+    </Variable>
+    <Variable>
+      <Value>8.8.8.8</Value>
+      <Name>PUBLIC_DNS</Name>
+      <Mode>{3}</Mode>
+    </Variable>
+    <Variable>
+      <Value>Pavel Kubi&#x161;</Value>
+      <Name>ORGANISATION_UNIT</Name>
+      <Mode>{3}</Mode>
+    </Variable>
+    <Variable>
+      <Value>St&#x159;edn&#xED; pr&#x16F;myslov&#xE1; &#x161;kola T&#x159;eb&#xED;&#x10D;</Value>
+      <Name>ORGANISATION</Name>
+      <Mode>{3}</Mode>
+    </Variable>
+    <Variable>
+      <Value>T&#x159;eb&#xED;&#x10D;</Value>
+      <Name>CITY</Name>
+      <Mode>{3}</Mode>
+    </Variable>
+    <Variable>
+      <Value>Czech Republic (CZ)</Value>
+      <Name>STATE</Name>
+      <Mode>{3}</Mode>
+    </Variable>
+    <Variable>
+      <Value>67503</Value>
+      <Name>COUNTRY_CODE</Name>
+      <Mode>{3}</Mode>
+    </Variable>
+    <Variable>
+      <Value>Pavel</Value>
+      <Name>KEYSTORE_PASS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>Trubec_31213</Value>
+      <Name>KEY_PASS</Name>
+      <Mode>{3}</Mode>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="WebUI Port" Target="8080" Default="3000" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="false" Mask="false">3000</Config>
+  <Config Name="WebUI SSL Port" Target="8443" Default="3443" Mode="tcp" Description="Container Port: 8443" Type="Port" Display="advanced" Required="false" Mask="false">3443</Config>
+  <Config Name="Enable Lets Encrypt" Target="LETS_ENCRYPT_ENABLED" Default="false" Mode="{3}" Description="Enables Let's Encrypt certificate instead of self-signed certificates" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
+  <Config Name="PUBLIC_DNS" Target="PUBLIC_DNS" Default="" Mode="{3}" Description=" DNS domain to be used as certificate " Type="Variable" Display="advanced" Required="false" Mask="false">8.8.8.8</Config>
+  <Config Name="ORGANISATION_UNIT" Target="ORGANISATION_UNIT" Default="" Mode="{3}" Description="Organisation unit to be used as certificate " Type="Variable" Display="advanced" Required="false" Mask="false">Pavel Kubi&#x161;</Config>
+  <Config Name="ORGANISATION" Target="ORGANISATION" Default="" Mode="{3}" Description="Organisation name to be used as certificate " Type="Variable" Display="advanced" Required="false" Mask="false">St&#x159;edn&#xED; pr&#x16F;myslov&#xE1; &#x161;kola T&#x159;eb&#xED;&#x10D;</Config>
+  <Config Name="CITY" Target="CITY" Default="" Mode="{3}" Description="City name to be used as certificate " Type="Variable" Display="advanced" Required="false" Mask="false">T&#x159;eb&#xED;&#x10D;</Config>
+  <Config Name="STATE" Target="STATE" Default="" Mode="{3}" Description=" State name to be used as certificate " Type="Variable" Display="advanced" Required="false" Mask="false">Czech Republic (CZ)</Config>
+  <Config Name="COUNTRY_CODE" Target="COUNTRY_CODE" Default="" Mode="{3}" Description="Country code to be used as certificate " Type="Variable" Display="advanced" Required="false" Mask="false">67503</Config>
+  <Config Name="KEYSTORE_PASS" Target="KEYSTORE_PASS" Default="" Mode="" Description="'.keystore'/.jks' store password" Type="Variable" Display="advanced" Required="true" Mask="true">Pavel</Config>
+  <Config Name="KEY_PASS" Target="KEY_PASS" Default="" Mode="{3}" Description="Private key password &amp;lt;ref:KEYSTORE_PASS&amp;gt;" Type="Variable" Display="advanced" Required="true" Mask="true">Trubec_31213</Config>
+</Container>
